@@ -3,7 +3,7 @@
     {
       "name": "aspect-logging.log-level",
       "type": "java.lang.String",
-      "description": "Logging level.",
+      "description": "Logging level. ERROR, WARN, INFO, DEBUG, TRACE",
       "defaultValue": "INFO"
     },
     {
