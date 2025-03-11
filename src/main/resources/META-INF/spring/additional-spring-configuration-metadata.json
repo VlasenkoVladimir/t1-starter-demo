@@ -1,0 +1,34 @@
+{
+  "properties": [
+    {
+      "name": "aspect-logging.log-level",
+      "type": "java.lang.String",
+      "description": "Logging level.",
+      "defaultValue": "INFO"
+    },
+    {
+      "name": "aspect-logging.log-before.enable",
+      "type": "java.lang.Integer",
+      "description": "Log before enter method.",
+      "defaultValue": false
+    },
+    {
+      "name": "aspect-logging.log-after-returning.enable",
+      "type": "java.lang.Integer",
+      "description": "Log after returning answer.",
+      "defaultValue": false
+    },
+    {
+      "name": "aspect-logging.execution-time.enable",
+      "type": "java.lang.Integer",
+      "description": "Log and calculate execution time.",
+      "defaultValue": false
+    },
+    {
+      "name": "aspect-logging.catch-exception.enable",
+      "type": "java.lang.Integer",
+      "description": "Log caught exception.",
+      "defaultValue": false
+    }
+  ]
+}
