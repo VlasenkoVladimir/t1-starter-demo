@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group = 'edu.vlasenko'
+version = '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation 'org.springframework.boot:spring-boot-starter:3.4.3'
+    implementation 'org.springframework.boot:spring-boot-starter-aop:3.4.2'
+}
+
+publishing {
+    publications {
+        pluginPublication (MavenPublication) {
+            from components.java
+            groupId project.group
+            artifactId "t1-demo-spring-starter"
+            version project.version
+        }
+    }
+}
