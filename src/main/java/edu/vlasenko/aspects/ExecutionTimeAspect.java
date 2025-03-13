@@ -1,28 +1,17 @@
 package edu.vlasenko.aspects;
 
-import edu.vlasenko.config.AspectLoggingConfig;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.slf4j.event.Level;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
-import org.springframework.stereotype.Component;
 
 /**
  * Aspect for calculating execution time
  */
-@Component
 @Aspect
-@ConditionalOnExpression("${aspect-logging.execution-time.enable}")
-public class ExecutionTimeAspect {
+public class ExecutionTimeAspect extends AbstractAspect {
 
-    private final Level level;
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
-
-    public ExecutionTimeAspect(AspectLoggingConfig config) {
-        this.level = config.getLogLevel();
+    public ExecutionTimeAspect(String logLevel) {
+        super(logLevel);
     }
 
     @Around("@annotation(edu.vlasenko.aspects.annotations.ExecutionTime)")

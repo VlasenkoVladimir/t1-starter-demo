@@ -1,34 +1,52 @@
 {
   "properties": [
     {
-      "name": "aspect-logging.log-level",
+      "name": "aspect-logging.log-before.enabled",
       "type": "java.lang.String",
-      "description": "Logging level. ERROR, WARN, INFO, DEBUG, TRACE",
-      "defaultValue": "INFO"
-    },
-    {
-      "name": "aspect-logging.log-before.enable",
-      "type": "java.lang.Integer",
-      "description": "Log before enter method.",
+      "description": "Log before enter method. Default value = false",
       "defaultValue": false
     },
     {
-      "name": "aspect-logging.log-after-returning.enable",
-      "type": "java.lang.Integer",
-      "description": "Log after returning answer.",
+      "name": "aspect-logging.logBefore.log-level",
+      "type": "java.lang.String",
+      "description": "Logging level. error, warn, info, debug, trace. Default value = info",
+      "defaultValue": "info"
+    },
+    {
+      "name": "aspect-logging.log-after-returning.enabled",
+      "type": "java.lang.String",
+      "description": "Log after returning answer. Default value = false",
       "defaultValue": false
     },
     {
-      "name": "aspect-logging.execution-time.enable",
-      "type": "java.lang.Integer",
-      "description": "Log and calculate execution time.",
+      "name": "aspect-logging.log-after-returning.log-level",
+      "type": "java.lang.String",
+      "description": "Logging level. error, warn, info, debug, trace. Default value = info",
+      "defaultValue": "info"
+    },
+    {
+      "name": "aspect-logging.execution-time.enabled",
+      "type": "java.lang.String",
+      "description": "Log and calculate execution time. Default value = false",
       "defaultValue": false
     },
     {
-      "name": "aspect-logging.catch-exception.enable",
-      "type": "java.lang.Integer",
-      "description": "Log caught exception.",
+      "name": "aspect-logging.execution-time.log-level",
+      "type": "java.lang.String",
+      "description": "Logging level. error, warn, info, debug, trace. Default value = info",
+      "defaultValue": "info"
+    },
+    {
+      "name": "aspect-logging.catch-exception.enabled",
+      "type": "java.lang.String",
+      "description": "Log caught exception. Default value = false",
       "defaultValue": false
+    },
+    {
+      "name": "aspect-logging.catch-exception.log-level",
+      "type": "java.lang.String",
+      "description": "Logging level. error, warn, info, debug, trace. Default value = info",
+      "defaultValue": "info"
     }
   ]
 }

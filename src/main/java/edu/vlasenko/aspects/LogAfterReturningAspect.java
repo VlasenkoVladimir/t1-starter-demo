@@ -1,27 +1,16 @@
 package edu.vlasenko.aspects;
 
-import edu.vlasenko.config.AspectLoggingConfig;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.slf4j.event.Level;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
-import org.springframework.stereotype.Component;
 
 /**
  * Aspect for logging after returning
  */
-@Component
 @Aspect
-@ConditionalOnExpression("${aspect-logging.log-after-returning.enable}")
-public class LogAfterReturningAspect {
+public class LogAfterReturningAspect extends AbstractAspect {
 
-    private final Level level;
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
-
-    public LogAfterReturningAspect(AspectLoggingConfig config) {
-        this.level = config.getLogLevel();
+    public LogAfterReturningAspect(String logLevel) {
+        super(logLevel);
     }
 
     @AfterReturning(
